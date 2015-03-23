@@ -42,6 +42,12 @@
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WPj-PV-sNj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5c-1s-9KB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -50,6 +56,8 @@
                             <constraint firstAttribute="centerY" secondItem="irh-gi-wDU" secondAttribute="centerY" id="Mgo-AB-w27"/>
                             <constraint firstAttribute="centerX" secondItem="qJI-xg-E2P" secondAttribute="centerX" id="VwC-zx-44i"/>
                             <constraint firstAttribute="centerX" secondItem="irh-gi-wDU" secondAttribute="centerX" id="bwD-Rg-xjL"/>
+                            <constraint firstAttribute="centerX" secondItem="l5c-1s-9KB" secondAttribute="centerX" id="fmR-SN-Pxl"/>
+                            <constraint firstItem="l5c-1s-9KB" firstAttribute="top" secondItem="irh-gi-wDU" secondAttribute="bottom" constant="30" id="oor-o4-iji"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qJI-xg-E2P" secondAttribute="bottom" constant="65" id="w56-i0-FZg"/>
                         </constraints>
                         <variation key="default">
@@ -57,14 +65,17 @@
                                 <exclude reference="irh-gi-wDU"/>
                                 <exclude reference="HWH-kU-xpb"/>
                                 <exclude reference="qJI-xg-E2P"/>
+                                <exclude reference="l5c-1s-9KB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="w56-i0-FZg"/>
-                                <exclude reference="7Dx-Z4-aoe"/>
-                                <exclude reference="7dP-6L-7h6"/>
                                 <exclude reference="Mgo-AB-w27"/>
                                 <exclude reference="bwD-Rg-xjL"/>
+                                <exclude reference="fmR-SN-Pxl"/>
+                                <exclude reference="oor-o4-iji"/>
+                                <exclude reference="7Dx-Z4-aoe"/>
+                                <exclude reference="7dP-6L-7h6"/>
                                 <exclude reference="VwC-zx-44i"/>
+                                <exclude reference="w56-i0-FZg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -72,14 +83,17 @@
                                 <include reference="irh-gi-wDU"/>
                                 <include reference="HWH-kU-xpb"/>
                                 <include reference="qJI-xg-E2P"/>
+                                <include reference="l5c-1s-9KB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="w56-i0-FZg"/>
-                                <include reference="7Dx-Z4-aoe"/>
-                                <include reference="7dP-6L-7h6"/>
                                 <include reference="Mgo-AB-w27"/>
                                 <include reference="bwD-Rg-xjL"/>
+                                <include reference="fmR-SN-Pxl"/>
+                                <include reference="oor-o4-iji"/>
+                                <include reference="7Dx-Z4-aoe"/>
+                                <include reference="7dP-6L-7h6"/>
                                 <include reference="VwC-zx-44i"/>
+                                <include reference="w56-i0-FZg"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,6 +102,7 @@
                         <outlet property="recordButton" destination="irh-gi-wDU" id="vOU-Q9-u0V"/>
                         <outlet property="recordingLabel" destination="HWH-kU-xpb" id="6Sp-Lb-e2L"/>
                         <outlet property="stopButton" destination="qJI-xg-E2P" id="OyC-bB-Eww"/>
+                        <outlet property="tapToRecordLabel" destination="l5c-1s-9KB" id="kHg-5k-YEn"/>
                         <segue destination="CV5-Hw-2Jz" kind="show" identifier="stopRecording" id="Op4-ae-zGk"/>
                     </connections>
                 </viewController>
